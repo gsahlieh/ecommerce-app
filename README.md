@@ -3,7 +3,11 @@
 ## Technologies include:
 
 React
+
 Tailwind CSS
+
 Redux
+
 MongoDB/Mongoose
+
 Express
