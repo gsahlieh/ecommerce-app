@@ -19,6 +19,7 @@ const ProductPage = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         const getProductById = async () => {
             try {
                 const res = await axios.get(`http://localhost:5000/api/products/find/${productId.id}`)
@@ -70,7 +71,7 @@ const ProductPage = () => {
                                     <p className='m-2 text-2xl select-none'>{quantity}</p>
                                     <GrAddCircle size={30} className='m-2 hover:opacity-50 cursor-pointer' onClick={() => setQuantity(quantity + 1)}/>
                                 </div>
-                                <button className='bg-transparent cursor-pointer border-black border-2 w-fit p-1 hover:opacity-50 select-none' onClick={handleClick}>ADD TO CART</button>
+                                <button className='bg-transparent cursor-pointer border-black border-2 px-3 p-1 hover:opacity-50 select-none' onClick={handleClick}>ADD TO CART</button>
                             </div>
                         </div>
                 </div>

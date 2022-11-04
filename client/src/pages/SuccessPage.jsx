@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { userRequest } from '../requestMethods';
+import { Link } from 'react-router-dom'
 
 const SuccessPage = (stripeData, products) => {
   const location = useLocation()
@@ -46,8 +47,8 @@ const SuccessPage = (stripeData, products) => {
     >
       {orderId
         ? `Order has been created successfully. Your order number is ${orderId}`
-        : `Successfull. Your order is being prepared...`}
-      <button style={{ padding: 10, marginTop: 20 }}>Go to Homepage</button>
+        : `Successful. Your order is being prepared...`}
+      <Link to={'/'} style={{ padding: 10, marginTop: 20 }}>Go to Homepage</Link>
     </div>
   );
 }

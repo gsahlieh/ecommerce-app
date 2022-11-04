@@ -12,15 +12,15 @@ const Footer = () => {
             <h2 className='m-3 font-bold'>Contact us</h2>
             <div className='flex m-3'>
               <HiLocationMarker size={25} className='mx-2'/>
-              <p>45 River Oak circuit kellyville</p>
+              <p>Sydney, Australia</p>
             </div>
             <div className='flex m-3'>
               <MdEmail size={25} className='mx-2'/>
-              <p>gsahlieh@outlook.com</p>
+              <p>contact@flightclub.com</p>
             </div>
             <div className='flex m-3'>
               <BsFillTelephoneFill size={25} className='mx-2'/>
-              <p>0488715046</p>
+              <p>+61 412 345 678</p>
             </div>
             <div>
 
@@ -30,16 +30,15 @@ const Footer = () => {
         <div className='h-full w-1/3 hidden md:flex flex-col'>
           <h2 className='m-3 font-bold'>Links</h2>
           <ul className='h-[14vh] m-3 mb-5 flex flex-wrap flex-col'>
-            <li>Some page</li>
-            <li>Some page</li>
-            <li>Some page</li>
-            <li>Some page</li>
-            <li>Some page</li>
-            <li>Some page</li>
-            <li>Some page</li>
-            <li>Some page</li>
-            <li>Some page</li>
-            <li>Some page</li>
+            <li>Mens Sale</li>
+            <li>Womens Sale</li>
+            <li>Kids Sale</li>
+            <li>Clearance Sale</li>
+            <li>New Releases</li>
+            <li>Mens Shoes</li>
+            <li>Womens Shoes</li>
+            <li>Kids Shoes</li>
+
           </ul>
         </div>
 

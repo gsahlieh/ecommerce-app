@@ -9,7 +9,7 @@ import { useState } from 'react'
 import logo from '../assets/attachment_123198503.png'
 import { useEffect } from 'react'
 import { userRequest } from '../requestMethods'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const KEY = 'pk_test_51LvfOMGUYVibWiwZnH9RACuSUGfHH7ClJCozIhRwwEnZJGVBXsuer3LhkScqd7mvsfZXsIaBtC1YpGElq4HYJX0R00gWYBlhhf'
 
@@ -23,6 +23,7 @@ const CartPage = () => {
         setStripeToken(token)
     }
     console.log(stripeToken)
+    
     useEffect(() => {
         const makeRequest = async () => {
             try{
@@ -57,7 +58,7 @@ const CartPage = () => {
                 
                 <div className='flex flex-row  justify-between items-center mb-5'>
                     
-                    <button className='bg-transparent cursor-pointer border-black border-2 w-fit p-1 hover:opacity-50 '>CONTINUE SHOPPING</button>
+                    <Link className='bg-transparent cursor-pointer border-black border-2 w-fit p-1 hover:opacity-50' to={'/products'}>CONTINUE SHOPPING</Link>
                     <div className='underline flex-col items-center hidden md:flex'>
                         <p className='hover:opacity-50'>Shopping Bag (2)</p>
                         <p className='hover:opacity-50'>Wishlist (0)</p>
@@ -125,7 +126,7 @@ const CartPage = () => {
                     amount={cart.total * 100}
                     token={onToken}
                     stripeKey={KEY}>
-                        <button className='w-full cursor-pointer bg-black text-white border-2 p-1 hover:bg-gray-900'>CHECKOUT NOW</button>
+                        <button className='w-full cursor-pointer bg-black text-white border-2 p-1 hover:bg-gray-900 px-4'>CHECKOUT NOW</button>
                     </StripeCheckout>
                 </div>
             </div>

@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { logout } from '../redux/userRedux'
 
 const Announcement = () => {
+  const user = useSelector(state => state.user.currentUser)
+  const dispatch = useDispatch()
+
   return (
     <div className='w-full hidden h-[3vh] md:h-[3vh] bg-red-500 md:flex items-center justify-end'>
 
@@ -11,7 +16,9 @@ const Announcement = () => {
             </div>
             <h3>|</h3>
             <div>
-                <Link to={'/login'}><h3>Login</h3></Link>
+                {user ? <h3 className='cursor-pointer' onClick={() => {dispatch(logout)
+                console.log('logged out')}}>Logout</h3> : <Link to={'/login'}><h3>Login</h3></Link>}  
+                
             </div>
             
 

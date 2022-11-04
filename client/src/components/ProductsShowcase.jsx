@@ -50,11 +50,11 @@ const ProductsShowcase = (
   }, [sort]);
   
   return (
-    <div className='w-full'>
-        <div className='w-full mt-4 grid gap-8 justify-between grid-cols-2 md:grid-cols-3'>
+    <div className='w-full mb-8'>
+        <div className='w-full mt-4 grid gap-8 grid-cols-2 md:grid-cols-3'>
           {category ? 
           filteredProducts.map((product) => (
-              <Link key={product._id} to={`/product/${product._id}`}>
+              <Link className='h-fit' key={product._id} to={`/product/${product._id}`}>
                 <div className='animate-slider-right border-2 hover:opacity-50 cursor-pointer duration-300'>
                   <img src={product.img} alt="image" className=" object-cover"/>
                   <p className='text-lg overflow-auto px-6 md:pb-7 font-bold'>{product.title}</p>
@@ -62,7 +62,7 @@ const ProductsShowcase = (
               </Link>
           )) : (
             products.map((product) => (
-              <Link key={product._id} to={`/product/${product._id}`}>
+              <Link className='h-fit' key={product._id} to={`/product/${product._id}`}>
                 <div className='animate-slider-right border-2'>
                   <img src={product.img} alt="image" className=" object-cover"/>
                   <p className='text-lg overflow-auto px-6 md:pb-7 font-bold'>{product.title}</p>

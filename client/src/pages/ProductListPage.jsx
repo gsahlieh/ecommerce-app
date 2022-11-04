@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import ProductsShowcase from '../components/ProductsShowcase'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 const ProductListPage = () => {
     const category = useParams();
@@ -18,9 +19,11 @@ const ProductListPage = () => {
             ...filters,
             [e.target.name]: value
         })
-        
-        
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     console.log(filters)
     return (

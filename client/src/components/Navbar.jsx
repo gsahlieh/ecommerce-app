@@ -13,6 +13,7 @@ import { Badge } from '@mui/material'
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const quantity = useSelector(state => state.cart.quantity)
+
   
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen)
@@ -20,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div className='sticky top-0 w-full h-[6vh] md:h-[6vh] bg-black text-white flex items-center z-10'>
-      <div className='w-full flex justify-between items-center '>
+      <div className='w-full flex justify-between items-center'>
         {/* logo */}
         <div>
           <Link to={'/'}><img src={flightclub} alt="" className='w-40 h-10 bg-transparent mx-5'/></Link>

@@ -10,7 +10,7 @@ const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useDispatch()
-  const { isFetching, error } = useSelector(state => state.user)
+  const { currentUser, isFetching, error } = useSelector(state => state.user)
 
 
   const handleClick = (e) => {
