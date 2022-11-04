@@ -25,7 +25,6 @@ const ProductListPage = () => {
         window.scrollTo(0, 0)
     }, [])
 
-    console.log(filters)
     return (
     <div className='w-full max-w-screen flex flex-col '>
         <Navbar />

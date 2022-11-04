@@ -11,9 +11,6 @@ const SuccessPage = (stripeData, products) => {
   const data = location.state.stripeData;
   const cart = location.state.cart;
 
-  console.log(location.state.stripeData)
-  console.log(location.state.products)
-
   const currentUser = useSelector((state) => state.user.currentUser);
   const [orderId, setOrderId] = useState(null);
   

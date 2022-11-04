@@ -13,10 +13,6 @@ const MainBanner = () => {
         } else {
             setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
         }
-        console.log(direction)
-        console.log(slideIndex)
-        console.log(slideIndex * -100)
-        console.log(`translate-x-${slideIndex}`)
     }
   
     return (

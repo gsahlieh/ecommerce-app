@@ -10,15 +10,12 @@ const FeaturedInfo = () => {
     const getIncome = async () => {
         try{
             const res = await userRequest.get('orders/income')
-            console.log(res)
             setIncome(res.data)
             setPercentage((res.data[-1].sales*100) / res.data[-2].sales - 100)
         }catch {}
 
     }
     getIncome()
-
-    console.log(income)
   }, [])
   
     return (

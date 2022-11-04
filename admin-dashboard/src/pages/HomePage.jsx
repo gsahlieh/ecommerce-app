@@ -40,7 +40,6 @@ const HomePage = () => {
       getStats()
     }, [MONTHS])
 
-    console.log(userStats)
 
   return (
     <div className='w-full mx-auto overflow-clip p-5 max-w-[76vw]'>

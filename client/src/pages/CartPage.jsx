@@ -32,8 +32,6 @@ const CartPage = () => {
                     amount: cart.total * 100,
                     
                 })
-                console.log(res.data)
-                console.log(cart)
                 navigate('/success', {state: {
                     stripeData: res.data,
                     products: cart

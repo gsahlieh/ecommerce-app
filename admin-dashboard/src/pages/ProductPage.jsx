@@ -60,7 +60,6 @@ const ProductPage = () => {
       }
     };
     getStats();
-    console.log(pStats)
   }, [productId, MONTHS]);
 
 

@@ -16,8 +16,7 @@ const Announcement = () => {
             </div>
             <h3>|</h3>
             <div>
-                {user ? <h3 className='cursor-pointer' onClick={() => {dispatch(logout)
-                console.log('logged out')}}>Logout</h3> : <Link to={'/login'}><h3>Login</h3></Link>}  
+                {user ? <h3 className='cursor-pointer' onClick={() => dispatch(logout)}>Logout</h3> : <Link to={'/login'}><h3>Login</h3></Link>}  
                 
             </div>
             
