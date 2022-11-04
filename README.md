@@ -1,9 +1,9 @@
 # E-commerce app
 
-## Technologies used:
+## Technologies include:
 
-### React
-### Tailwind CSS
-### Redux
-### MongoDB/Mongoose
-### Express
+React
+Tailwind CSS
+Redux
+MongoDB/Mongoose
+Express
